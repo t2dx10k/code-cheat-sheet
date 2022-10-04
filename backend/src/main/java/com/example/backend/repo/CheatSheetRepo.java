@@ -26,4 +26,9 @@ public class CheatSheetRepo {
     public List<CheatSheet> getAllCommands() {
         return List.copyOf(cheatSheetMap.values());
     }
+
+    public CheatSheet postCommand(CheatSheet newCheatSheet) {
+        cheatSheetMap.put(newCheatSheet.getId(), newCheatSheet);
+        return cheatSheetMap.get(newCheatSheet.getId());
+    }
 }
