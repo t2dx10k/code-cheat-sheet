@@ -13,5 +13,6 @@ import java.util.Map;
 
 @Repository
 public interface CheatSheetRepo extends MongoRepository<CheatSheet, String> {
+
 }
 
