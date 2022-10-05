@@ -22,7 +22,7 @@ public class CheatSheetService {
 
 
     public List<CheatSheet> getAllCommands() {
-        return repo.getAllCommands();
+        return repo.findAll();
     }
 
     public CheatSheet postCommand(CheatSheet postCheat) {
@@ -34,7 +34,7 @@ public class CheatSheetService {
                 .description(postCheat.getDescription())
                 .build();
 
-        return repo.postCommand(newCheatSheet);
+        return repo.save(newCheatSheet);
     }
 }
 
