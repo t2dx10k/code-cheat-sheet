@@ -1,4 +1,4 @@
-import "../components/CheatCard.css"
+
 import CheatGallery from "../components/CheatGallery";
 import {CheatSheet} from "../model/CheatSheet";
 
@@ -13,7 +13,7 @@ export default function MainPage(props: CheatGalleryProps) {
     return (
         <>
             <h1>Cheater!!!!!!</h1>
-            <div className={"cheatCard"}></div>
+            <div ></div>
             <CheatGallery commands={props.commands}></CheatGallery>
         </>
     )
