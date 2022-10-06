@@ -11,8 +11,6 @@ export default function CheatGallery(props: CheatGalleryProps){
 
     const outputCard = props.commands.map((command) => <CheatCard cheat={command} key={command.id}/>)
 
-
-
     return(
         <>
             <AddCommands/>
