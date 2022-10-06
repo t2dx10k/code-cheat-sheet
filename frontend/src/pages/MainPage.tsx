@@ -12,7 +12,7 @@ export default function MainPage(props: CheatGalleryProps) {
 
     return (
         <>
-            <h1>Mirko du Cheater!!!!!!</h1>
+            <h1>Marek du Cheater!!!!!! </h1>
             <div ></div>
             <CheatGallery commands={props.commands}></CheatGallery>
         </>
