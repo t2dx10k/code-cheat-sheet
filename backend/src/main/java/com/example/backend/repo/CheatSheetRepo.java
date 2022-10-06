@@ -2,7 +2,6 @@ package com.example.backend.repo;
 
 
 import com.example.backend.model.CheatSheet;
-import lombok.AllArgsConstructor;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
