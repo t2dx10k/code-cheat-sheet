@@ -4,6 +4,7 @@ import AddCommands from "./AddCommands";
 
 type CheatGalleryProps = {
     commands: CheatSheet[]
+    addCommand: (toAdd: CheatSheet) => void
 
 }
 
@@ -13,7 +14,7 @@ export default function CheatGallery(props: CheatGalleryProps){
 
     return(
         <>
-            <AddCommands/>
+            <AddCommands addCommand={props.addCommand}/>
             {outputCard}
         </>
     )

@@ -1,27 +1,32 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
+import {CheatSheet} from "../model/CheatSheet";
 
-export default function useCheat(){
+export default function useCheat() {
 
     const [cheat, setCheat] = useState([]);
 
-    useEffect(()=>{getAllCommand()}, [])
-    const getAllCommand = ()=>{
+    useEffect(() => {
+
+        getAllCommand()
+
+    }, [])
+
+    const getAllCommand = () => {
         axios.get("/api/cheatsheet/")
-            .then((response)=>{return response.data})
-            .then((cheat)=> {setCheat(cheat)})
+            .then((response) => {
+                return response.data
+            })
+            .then((cheat) => {
+                setCheat(cheat)
+            })
     }
 
-    /*
-    const addCheat = (newTitle:string, newAuthor:string, newIsbn:string) => {
-        let newBook = {
-            title: newTitle,
-            author: newAuthor,
-            isbn: newIsbn
-        }
-
-        axios.put("/api/cheatsheet/" + newIsbn, newBook)
+    const addCommand = (commandToAdd: CheatSheet) => {
+        axios.post("/api/cheatsheet/", commandToAdd)
             .then(getAllCommand)
-    }*/
-    return {cheat}
+            .catch(() => console.error())
+    }
+
+    return {cheat, addCommand}
 }
