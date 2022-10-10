@@ -40,8 +40,8 @@ jobs:
         run: mvn -B package --file backend/pom.xml
       - uses: actions/upload-artifact@v2
         with:
-          name: build-backend
-          path: backend/target/Cheat%20Sheet.jar
+          name: backend-build
+          path: backend/target/CheatSheet.jar
 
   deploy:
     runs-on: ubuntu-latest
