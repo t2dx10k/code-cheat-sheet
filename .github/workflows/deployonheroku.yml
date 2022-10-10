@@ -2,7 +2,7 @@ name: Deploy on Heroku
 on:
   push:
     branches:
-      - feature
+      - feature0.0.0.1
       - master
 
 jobs:
@@ -41,7 +41,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: backend-build
-          path: backend/target/code-cheat-sheet.jar
+          path: backend/target/Cheat%20Sheet.jar
 
   deploy:
     runs-on: ubuntu-latest
