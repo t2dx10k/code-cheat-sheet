@@ -60,6 +60,6 @@ jobs:
       - name: Login to Heroku
         run: heroku container:login
       - name: Push App
-        run: heroku container:push web -a cheat-sheet
+        run: heroku container:push web -a code-cheat-sheet
       - name: Release App
-        run: heroku container:release web -a cheat-sheet
+        run: heroku container:release web -a code-cheat-sheet
