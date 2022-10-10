@@ -4,4 +4,4 @@ LABEL maintainer="Mirko"
 
 ADD backend/target/CheatSheet.jar CheatSheet.jar
 
-CMD [ "sh", "-c", "java -DServer.port=$PORT -jar /Cheat%20Sheet.jar"]
+CMD [ "sh", "-c", "java -DServer.port=$PORT -jar /CheatSheet.jar"]
