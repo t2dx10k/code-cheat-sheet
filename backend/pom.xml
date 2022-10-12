@@ -59,6 +59,7 @@
     </dependencies>
 
     <build>
+        <finalName>CheatSheet</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
