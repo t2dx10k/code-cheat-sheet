@@ -1,5 +1,7 @@
 .cheatCard {
-    width: 28%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     height: 42vh;
-    background-color: #6965a0;
+    background: radial-gradient(#1fe4f5, #3fbafe);
 }

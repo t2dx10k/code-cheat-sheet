@@ -1,5 +1,6 @@
 import {CheatSheet} from "../model/CheatSheet";
 import {useState} from "react";
+import "./AddCommands.css"
 
 type AddCommandsProps = {
     addCommand: (toAdd: CheatSheet) => void
@@ -31,7 +32,7 @@ export default function AddCommands(props: AddCommandsProps) {
                 placeholder={"Name"}
                 value={command.name}
                 onChange={(value) => setCommand((old) => ({...old, [value.target.name]: value.target.value}))}
-                className={"button"}
+                className={"input-style"}
                 name={"name"}
             />
 
@@ -40,12 +41,12 @@ export default function AddCommands(props: AddCommandsProps) {
                 placeholder={"Command"}
                 value={command.command}
                 onChange={(value) => setCommand((old) => ({...old, [value.target.name]: value.target.value}))}
-                className={"button"}
+                className={"input-style"}
                 name={"command"}
             />
 
             <label>
-                <select>
+                <select className={"input-style"}>
                     <option disabled={true} value={""}>Select Catagory</option>
                     <option value={"Java"} onClick={
                         (value:any) => setCommand((old) => ({...old, category: value.target.value}))} >
@@ -90,11 +91,11 @@ export default function AddCommands(props: AddCommandsProps) {
                 placeholder={"Description"}
                 value={command.description}
                 onChange={(value) => setCommand((old) => ({...old, [value.target.name]: value.target.value}))}
-                className={"textinput"}
+                className={"input-style"}
                 name={"description"}
             />
 
-            <button type={"submit"} name={"Add Command"}>Add Command</button>
+            <button className={"command-btn-style"} type={"submit"} name={"Add Command"}>Add Command</button>
         </form>
     )
 }

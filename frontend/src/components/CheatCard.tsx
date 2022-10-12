@@ -8,11 +8,11 @@ type CheatCardProps = {
 export default function CheatCard(props: CheatCardProps) {
     return (
 
-        <section className={"cheatCard"}>
+        <div className={"cheatCard"}>
             <p>Name: {props.cheat.name}</p>
             <p>Befehl: {props.cheat.command}</p>
             <p>Kategorie: {props.cheat.category}</p>
             <p>Beschreibung: {props.cheat.description}</p>
-        </section>
+        </div>
     )
 }

@@ -1,0 +1,20 @@
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    border: 1px solid #000;
+    padding: 3px;
+    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-family: monospace;
+    width: 31%;
+    height: 42vh;
+    margin: 5px;
+}
