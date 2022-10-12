@@ -11,12 +11,12 @@ type CheatGalleryProps = {
 
 export default function CheatGallery(props: CheatGalleryProps){
 
-    const outputCard = props.commands.map((command) => <CheatCard cheat={command} key={command.id}/>)
+    //const outputCard = props.commands.map((command) => <CheatCard cheat={command} key={command.id}/>)
 
     return(
         <>
             <AddCommands addCommand={props.addCommand}/>
-            {outputCard}
+
 
             <div className={"cards"}>
                 {props.commands.map((command) =>
