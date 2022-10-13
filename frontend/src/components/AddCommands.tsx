@@ -21,7 +21,7 @@ export default function AddCommands(props: AddCommandsProps) {
     console.log(command);
 
     return (
-        <form onSubmit={(submit) => {
+        <form className={"form-style"} onSubmit={(submit) => {
             props.addCommand(command);
             submit.preventDefault()
             setCommand(emptyCommand)
@@ -91,7 +91,7 @@ export default function AddCommands(props: AddCommandsProps) {
                 placeholder={"Description"}
                 value={command.description}
                 onChange={(value) => setCommand((old) => ({...old, [value.target.name]: value.target.value}))}
-                className={"input-style"}
+                className={"input-style-desc"}
                 name={"description"}
             />
 

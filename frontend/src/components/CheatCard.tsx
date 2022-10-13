@@ -9,10 +9,10 @@ export default function CheatCard(props: CheatCardProps) {
     return (
 
         <div className={"cheatCard"}>
-            <p>Name: {props.cheat.name}</p>
-            <p>Befehl: {props.cheat.command}</p>
-            <p>Kategorie: {props.cheat.category}</p>
-            <p>Beschreibung: {props.cheat.description}</p>
+            <p><span>Name:</span><br/>{props.cheat.name}</p>
+            <p><span>Befehl:</span><br/> {props.cheat.command}</p>
+            <p><span>Kategorie:</span><br/> {props.cheat.category}</p>
+            <p><span>Beschreibung:</span><br/> {props.cheat.description}</p>
         </div>
     )
 }
