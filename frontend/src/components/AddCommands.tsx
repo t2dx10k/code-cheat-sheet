@@ -46,8 +46,8 @@ export default function AddCommands(props: AddCommandsProps) {
             />
 
             <label>
-                <select className={"input-style"}>
-                    <option disabled={true} value={""}>Select Catagory</option>
+                <select className={"input-style"} defaultValue={""}>
+                    <option value={""} disabled={true} >Select Catagory</option>
                     <option value={"Java"} onClick={
                         (value:any) => setCommand((old) => ({...old, category: value.target.value}))} >
                         Java
