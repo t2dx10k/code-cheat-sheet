@@ -20,6 +20,7 @@ export default function useCheat() {
             .then((cheat) => {
                 setCheat(cheat)
             })
+            .catch(() => console.error())
     }
 
     const addCommand = (commandToAdd: CheatSheet) => {

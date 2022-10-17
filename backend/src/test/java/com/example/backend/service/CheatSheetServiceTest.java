@@ -18,20 +18,21 @@ class CheatSheetServiceTest {
 
     @Test
     void getAllCommands() {
+        //GIVEN
         when(repo.findAll())
                 .thenReturn(List.of(
-                        new CheatSheet("1","int (Integer)","int {intName} = 1", "Java","Ganzzahl"),
-                        new CheatSheet("2", "float", "float {floatName} = 300000.1", "Java","Kommazahlen (32 Bit Genauigkeit)")));
-
+                        new CheatSheet("1", "int (Integer)", "int {intName} = 1", "Java", "Ganzzahl"),
+                        new CheatSheet("2", "float", "float {floatName} = 300000.1", "Java", "Kommazahlen (32 Bit Genauigkeit)")));
+        //WHEN
         List<CheatSheet> actual = service.getAllCommands();
-
+        //THEN
         List<CheatSheet> expected = List.of(
-                new CheatSheet("1","int (Integer)","int {intName} = 1", "Java","Ganzzahl"),
-                new CheatSheet("2", "float", "float {floatName} = 300000.1", "Java","Kommazahlen (32 Bit Genauigkeit)"));
+                new CheatSheet("1", "int (Integer)", "int {intName} = 1", "Java", "Ganzzahl"),
+                new CheatSheet("2", "float", "float {floatName} = 300000.1", "Java", "Kommazahlen (32 Bit Genauigkeit)"));
         verify(repo).findAll();
         assertEquals(expected, actual);
     }
-    
+
 }
 
 

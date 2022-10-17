@@ -11,10 +11,9 @@ type CheatGalleryProps = {
 
 export default function CheatGallery(props: CheatGalleryProps){
 
-    //const outputCard = props.commands.map((command) => <CheatCard cheat={command} key={command.id}/>)
-
     const [search, setSearch] = useState("");
-    const filteredCharacters = props.commands.filter((command) => command.name.toLowerCase().includes(search.toLowerCase()))
+    const filteredCheatSheets = props.commands.filter((command) =>
+        command.name.toLowerCase().includes(search.toLowerCase()))
 
     return(
         <>
@@ -27,7 +26,7 @@ export default function CheatGallery(props: CheatGalleryProps){
             </>
 
             <div className={"cards"}>
-                {filteredCharacters.map((command) =>
+                {filteredCheatSheets.map((command) =>
                 <div className={"card"}>
                 <CheatCard cheat={command}/>
                 </div>)}
