@@ -6,13 +6,13 @@ import useCheat from "./hooks/useCheat";
 
 function App() {
 
-    const{cheat, addCommand} = useCheat();
+    const{cheat, addCommand, deleteCheatSheet} = useCheat();
 
     return (
         <div className="App">
             <HashRouter>
                 <Routes>
-                    <Route path={"/"} element={<MainPage commands={cheat} addCommand={addCommand}/>}/>
+                    <Route path={"/"} element={<MainPage commands={cheat} addCommand={addCommand} deleteCommand={deleteCheatSheet}/>}/>
                 </Routes>
             </HashRouter>
         </div>
