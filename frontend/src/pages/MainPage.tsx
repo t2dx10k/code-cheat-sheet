@@ -23,7 +23,7 @@ export default function MainPage(props: CheatGalleryProps) {
                 <span><p className={"h1-header"}>Everything is possible</p></span>
             </main>
             
-            <CheatGallery commands={props.commands} addCommand={props.addCommand}></CheatGallery>
+            <CheatGallery commands={props.commands} addCommand={props.addCommand} deleteCommand={props.deleteCommand}></CheatGallery>
         </>
     )
 }
