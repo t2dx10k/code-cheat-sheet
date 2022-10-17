@@ -16,7 +16,7 @@ export default function CheatCard(props: CheatCardProps) {
             <p><span>Befehl:</span><br/> {props.cheat.command}</p>
             <p><span>Kategorie:</span><br/> {props.cheat.category}</p>
             <p><span>Beschreibung:</span><br/> {props.cheat.description}</p>
-            <button onClick={() => props.deleteCommand(props.cheat.id)}>Delete</button>
+            <button className={"deleteClass"} onClick={() => props.deleteCommand(props.cheat.id)}>Delete</button>
 
         </div>
     )
