@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -19,6 +20,7 @@ public class CheatSheetService {
         this.repo = cheatSheetRepo;
         this.idService = idService;
     }
+
 
 
     public List<CheatSheet> getAllCommands() {
@@ -36,6 +38,14 @@ public class CheatSheetService {
 
         return repo.save(newCheatSheet);
     }
+
+    public void deleteCheatSheet(String id) {
+         repo.deleteById(id);
+    }
+
+
+
+
 }
 
 
