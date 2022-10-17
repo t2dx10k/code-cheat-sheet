@@ -18,8 +18,6 @@ export default function AddCommands(props: AddCommandsProps) {
 
     const [command, setCommand] = useState(emptyCommand);
 
-    console.log(command);
-
     return (
         <form className={"form-style"} onSubmit={(submit) => {
             props.addCommand(command);
@@ -44,46 +42,25 @@ export default function AddCommands(props: AddCommandsProps) {
                 className={"input-style"}
                 name={"command"}
             />
-
             <label>
-                <select className={"input-style"}>
-                    <option disabled={true} value={""}>Select Catagory</option>
-                    <option value={"Java"} onClick={
-                        (value:any) => setCommand((old) => ({...old, category: value.target.value}))} >
-                        Java
-                    </option>
-                    <option value={"JavaScript"} onClick={
-                        (value:any) => setCommand((old) => ({...old, category: value.target.value}))} >
-                        JavaScript
-                    </option>
-                    <option value={"zsh-console"} onClick={
-                        (value:any) => setCommand((old) => ({...old, category: value.target.value}))} >
-                        zsh-console
-                    </option>
-                    <option value={"css"} onClick={
-                        (value:any) => setCommand((old) => ({...old, category: value.target.value}))} >
-                        CSS
-                    </option>
-                    <option value={"react"} onClick={
-                        (value:any) => setCommand((old) => ({...old, category: value.target.value}))} >
-                        React
-                    </option>
-                    <option value={"html"} onClick={
-                        (value:any) => setCommand((old) => ({...old, category: value.target.value}))} >
-                        HTML
-                    </option>
-                    <option value={"axios"} onClick={
-                        (value:any) => setCommand((old) => ({...old, category: value.target.value}))} >
-                        Axios
-                    </option>
-                    <option value={"mavenplugins"} onClick={
-                        (value:any) => setCommand((old) => ({...old, category: value.target.value}))} >
-                        Maven Plugins
-                    </option>
-                    <option value={"docker"} onClick={
-                        (value:any) => setCommand((old) => ({...old, category: value.target.value}))} >
-                        Docker
-                    </option>
+                <select
+                    className={"input-style"}
+                    onChange={(value) => {
+                        setCommand((old) => ({...old, category: value.target.value}))
+                    }}
+                    defaultValue={""}
+                >
+                    <option value={""} disabled={true}>Select Catagory</option>
+                    <option value={"Java"}>Java</option>
+                    <option value={"JavaScript"}>JavaScript</option>
+                    <option value={"zsh-console"}>zsh-console</option>
+                    <option value={"CSS"}>CSS</option>
+                    <option value={"React"}>React</option>
+                    <option value={"HTML"}>HTML</option>
+                    <option value={"Axios"}>Axios</option>
+                    <option value={"Mavenplugins"}>Maven Plugins</option>
+                    <option value={"Docker"}>Docker</option>
+
                 </select>
             </label>
 
